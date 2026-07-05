@@ -1,0 +1,7 @@
+axis,riva_n,formula_n,combo_n,rivaroxaban,formula,combination
+凝血级联 Coagulation,2,1,2,F10;F2,F2,F10;F2
+纤溶 Fibrinolysis,0,0,0,,,
+血小板活化 Platelet,0,5,5,,ALOX12;ALOX15;GRK6;PTGS1;PTGS2,ALOX12;ALOX15;GRK6;PTGS1;PTGS2
+血栓炎症 Thrombo-inflammation,0,6,6,,IL2;JAK2;NFKB1;NLRP3;PIK3R1;STAT6,IL2;JAK2;NFKB1;NLRP3;PIK3R1;STAT6
+血栓消散/重塑 Resolution,0,3,3,,MMP12;MMP2;MMP9,MMP12;MMP2;MMP9
+内皮/血管 Endothelium,0,2,2,,HIF1A;KDR,HIF1A;KDR

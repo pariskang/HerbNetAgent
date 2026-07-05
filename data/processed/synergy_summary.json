@@ -1,0 +1,17 @@
+{
+ "axes": 6,
+ "riva_axes": 1,
+ "formula_axes": 5,
+ "combo_axes": 5,
+ "overlap": [
+  "F2"
+ ],
+ "jaccard": 0.005,
+ "riva_only_axes": [],
+ "formula_adds_axes": [
+  "血小板活化 Platelet",
+  "血栓炎症 Thrombo-inflammation",
+  "血栓消散/重塑 Resolution",
+  "内皮/血管 Endothelium"
+ ]
+}

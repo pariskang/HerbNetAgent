@@ -1,0 +1,5 @@
+scenario,t50_days,residual_day35,bleeding_proxy,resolution_per_bleed
+Control,,1.075,0.0,inf
+Rivaroxaban 10mg,17.5,0.269,0.59,0.097
+Formula 1.5g,27.0,0.461,0.176,0.21
+Combination,9.0,0.069,0.685,0.162
