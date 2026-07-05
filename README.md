@@ -20,6 +20,14 @@ intermuscular (distal) venous thrombosis**.
   与水蛭素(hirudin)直接抑制凝血酶相互印证
 - 富集通路：**止血 / 血小板活化 / 花生四烯酸代谢 / HIF-1(淤滞) / VEGF-内皮 / TNF-白介素炎症** —— 对应 Virchow 三要素
 
+## 💊 联用分析 / Rivaroxaban co-administration
+
+**大黄蛰虫丸能否与利伐沙班（Rivaroxaban）联用？** 见 **[`docs/RIVAROXABAN_DDI.md`](docs/RIVAROXABAN_DDI.md)**。
+
+数据驱动结论：**不建议无专科监护下常规联用**，存在**双重出血风险放大**——
+- **药效学(PD)**：利伐沙班抑制 FXa，方剂命中凝血酶 F2 + 血小板 COX/LOX + 含水蛭素 → 抗凝作用叠加；
+- **药代(PK)**：方中 quercetin / licochalcone A / apigenin 等抑制 **CYP3A4 + P-gp + BCRP**（利伐沙班的代谢酶与外排转运体）→ 可能升高其血药浓度。quercetin 三条清除通路全抑制，licochalcone A 为强效 BCRP 抑制剂（IC50≈6 nM）。
+
 ## 🔬 方法与数据源 / Pipeline & data sources
 
 全流程由公开一级数据库 API 驱动，**无人工挑数、可独立复现**：
@@ -53,6 +61,8 @@ python3 scripts/05_enrichment.py       # Enrichr 富集
 python3 scripts/05b_curate_pathways.py # 筛选血栓相关通路
 python3 scripts/06_figures.py          # 生成图表
 python3 scripts/07_report.py           # 生成 docs/REPORT.md
+python3 scripts/08_rivaroxaban_ddi.py  # 利伐沙班联用: CYP3A4/P-gp/BCRP + PD 分析
+python3 scripts/09_ddi_report.py       # 生成 docs/RIVAROXABAN_DDI.md + 图
 ```
 
 ## 🖼️ 主要图表 / Figures

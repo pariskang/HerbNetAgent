@@ -1,0 +1,26 @@
+axis,target,target_chembl,role,compound,pchembl,potency,assay_type,value,units
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),paeonol,5.9,moderate(1-10µM),Potency,1258.9,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),apigenin,5.9,moderate(1-10µM),Potency,1258.9,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),quercetin,5.68,moderate(1-10µM),IC50,2110.0,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),isoliquiritigenin,5.4,moderate(1-10µM),Potency,3981.1,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),luteolin,5.3,moderate(1-10µM),Potency,5011.9,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),naringenin,5.3,moderate(1-10µM),Potency,5011.9,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),glabridin,5.16,moderate(1-10µM),Ki,7000.0,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),kaempferol,5.1,moderate(1-10µM),Potency,7943.3,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),baicalein,5.04,moderate(1-10µM),IC50,9200.0,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),emodin,5.0,moderate(1-10µM),Potency,10000.0,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),rhein,5.0,moderate(1-10µM),Potency,10000.0,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),formononetin,4.8,weak(>10µM),Potency,15848.9,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),chrysophanol,4.6,weak(>10µM),Potency,25118.9,nM
+PK,CYP3A4,CHEMBL340,PK: 主要代谢酶 (rivaroxaban ~51% CYP),fisetin,4.6,weak(>10µM),Potency,25118.9,nM
+PK,ABCB1/P-gp,CHEMBL4302,PK: 外排转运体 (rivaroxaban 底物),kaempferol,5.17,moderate(1-10µM),Kd,6760.83,nM
+PK,ABCB1/P-gp,CHEMBL4302,PK: 外排转运体 (rivaroxaban 底物),quercetin,5.15,moderate(1-10µM),Kd,7079.46,nM
+PK,ABCB1/P-gp,CHEMBL4302,PK: 外排转运体 (rivaroxaban 底物),apigenin,5.0,moderate(1-10µM),Kd,10000.0,nM
+PK,ABCB1/P-gp,CHEMBL4302,PK: 外排转运体 (rivaroxaban 底物),luteolin,4.71,weak(>10µM),IC50,19600.0,nM
+PK,ABCB1/P-gp,CHEMBL4302,PK: 外排转运体 (rivaroxaban 底物),baicalein,4.39,weak(>10µM),IC50,41000.0,nM
+PK,ABCB1/P-gp,CHEMBL4302,PK: 外排转运体 (rivaroxaban 底物),licochalcone A,4.02,weak(>10µM),IC50,94920.0,nM
+PK,ABCG2/BCRP,CHEMBL5393,PK: 外排转运体 (rivaroxaban 底物),licochalcone A,8.21,strong(<1µM),IC50,6.22,nM
+PK,ABCG2/BCRP,CHEMBL5393,PK: 外排转运体 (rivaroxaban 底物),quercetin,7.52,strong(<1µM),EC50,30.0,nM
+PK,ABCG2/BCRP,CHEMBL5393,PK: 外排转运体 (rivaroxaban 底物),apigenin,5.51,moderate(1-10µM),IC50,3100.0,nM
+PK,ABCG2/BCRP,CHEMBL5393,PK: 外排转运体 (rivaroxaban 底物),kaempferol,5.33,moderate(1-10µM),IC50,4700.0,nM
+PK,ABCG2/BCRP,CHEMBL5393,PK: 外排转运体 (rivaroxaban 底物),luteolin,5.05,moderate(1-10µM),IC50,8900.0,nM
