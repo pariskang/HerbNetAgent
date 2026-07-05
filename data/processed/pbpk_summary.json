@@ -1,0 +1,10 @@
+{
+ "baseline_auc": 3.5851,
+ "validation_strong_AUCR": 2.48,
+ "quercetin_half_mg": 0.006,
+ "quercetin_full_mg": 0.026,
+ "AUCR_half": 1.0327,
+ "AUCR_full": 1.0533,
+ "AUCR_500mg_supplement": 1.114,
+ "quercetin_mg_for_AUCR1p25": 3000.0
+}
