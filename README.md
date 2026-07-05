@@ -30,6 +30,8 @@ intermuscular (distal) venous thrombosis**.
 
 **协同增效/减毒/加速痊愈 的机制评估 + 实验路线图**见 **[`docs/SYNERGY_AND_EXPERIMENTS.md`](docs/SYNERGY_AND_EXPERIMENTS.md)**：利伐沙班仅覆盖凝血 1/6 轴，方剂互补覆盖 5/6 轴（独家补充血小板/炎症/血栓消散/内皮，靶点重叠仅 F2）。**增效与加速痊愈是有强机制支撑的阳性假说**（概念性 PD 模型示意联合组消散最快）；但**"减毒（降出血）"不成立**（抗栓叠加）——合理减毒只能是剂量/疗程节约。含 计算→体外(协同指数CI)→动物血栓模型→临床RCT 的完整验证路线图。
 
+**结合骨折愈合靶点的客观评估**见 **[`docs/FRACTURE_HEALING_ASSESSMENT.md`](docs/FRACTURE_HEALING_ASSESSMENT.md)**：方剂与 47 个骨愈合相关基因重叠；关键靶点方向显示——**潜在不利信号更确凿**（抑制 COX-2/PTGS2〔NSAID样延迟骨愈合〕、VEGFR2/KDR〔碍骨痂血运〕、MMP2/9〔碍重塑〕，且正落在 6 周重塑期），促成骨信号(ESR1/Wnt)较弱且多为体外。**无数据支持“促进骨折痊愈”；实际幅度受低暴露限制、不确定**——进一步支持“需临床个体化评估、勿自行联用”。
+
 数据驱动结论：**不建议无专科监护下常规联用**，存在**双重出血风险放大**——
 - **药效学(PD)**：利伐沙班抑制 FXa，方剂命中凝血酶 F2 + 血小板 COX/LOX + 含水蛭素 → 抗凝作用叠加；
 - **药代(PK)**：方中 quercetin / licochalcone A / apigenin 等抑制 **CYP3A4 + P-gp + BCRP**（利伐沙班的代谢酶与外排转运体）→ 可能升高其血药浓度。quercetin 三条清除通路全抑制，licochalcone A 为强效 BCRP 抑制剂（IC50≈6 nM）。
@@ -76,6 +78,8 @@ python3 scripts/13_pbpk_report.py      # 生成 docs/PBPK_MODEL.md + 图
 python3 scripts/14_synergy_analysis.py # 机制互补性(增效)分析
 python3 scripts/15_thrombus_pd_model.py# 概念性血栓消散PD模型
 python3 scripts/16_synergy_report.py   # 生成 docs/SYNERGY_AND_EXPERIMENTS.md + 图
+python3 scripts/17_fracture_targets.py # 骨折愈合靶点交叉+方向标注
+python3 scripts/18_fracture_report.py  # 生成 docs/FRACTURE_HEALING_ASSESSMENT.md + 图
 ```
 
 ## 🖼️ 主要图表 / Figures

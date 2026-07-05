@@ -1,0 +1,19 @@
+gene,phase,in_formula,in_rivaroxaban,bone_assoc_score,formula_action,effect_on_healing,note
+PTGS2,I/O,1,0,0.267,抑制(quercetin/apigenin),⚠️ 不利,COX-2 是骨折愈合必需;NSAID样抑制延迟骨愈合
+PTGS1,I,1,0,0.052,抑制(oleic acid),中性/轻不利,COX-1
+KDR,A,1,0,0,"抑制(quercetin,VEGFR2)",⚠️ 潜在不利,血管新生对骨痂血运关键;抗VEGFR2或碍血运
+HIF1A,A,1,0,0.086,调节,🟡 双向,缺氧诱导血管新生;HIF激活利于骨愈合
+MMP9,R,1,0,0.073,抑制(isoliquiritigenin),⚠️ 潜在不利,MMP9缺失延迟骨痂血管化/重塑
+MMP2,R,1,0,0.055,抑制(isoliquiritigenin/luteolin),⚠️ 潜在不利,参与骨痂重塑
+MMP13,R,1,0,0.016,(未直接命中),—,软骨/骨重塑主力胶原酶
+NFKB1,I,1,0,0.075,抑制(quercetin),🟡 双向,"过度炎症有害,但早期炎症必需"
+NLRP3,I,1,0,0.049,抑制(isoliquiritigenin),🟡 偏有利,抑制过度炎症小体或利后期愈合
+TNF,I,0,0,0.08,下调,🟡 双向,"早期需要,慢性过量有害"
+IL6,I,0,0,0.105,下调,🟡 双向,同上
+ESR1,O,1,0,0.715,激动样(植物雌激素),🟢 潜在有利,雌激素信号促成骨/抗骨丢失
+CTNNB1,O,1,0,0.417,命中(Wnt/β-catenin),🟢 潜在有利,Wnt通路促成骨
+RUNX2,O,0,0,0.169,(黄酮文献促成骨),🟢 潜在有利,成骨主控转录因子
+BMP2,O,0,0,0.056,(间接),🟢 有利,诱导成骨
+ALPL,O,0,0,0.087,(黄酮促ALP),🟢 潜在有利,成骨标志
+F2,K,1,1,0.043,抑制(quercetin+水蛭素),⚠️ 早期不利/现阶段影响小,凝血酶参与早期血肿支架;6周已过血肿期
+F10,K,0,1,0.372,利伐沙班抑制,⚠️ 早期不利/现阶段影响小,抗凝影响早期血肿;6周影响较小
