@@ -36,6 +36,12 @@ intermuscular (distal) venous thrombosis**.
 - **药效学(PD)**：利伐沙班抑制 FXa，方剂命中凝血酶 F2 + 血小板 COX/LOX + 含水蛭素 → 抗凝作用叠加；
 - **药代(PK)**：方中 quercetin / licochalcone A / apigenin 等抑制 **CYP3A4 + P-gp + BCRP**（利伐沙班的代谢酶与外排转运体）→ 可能升高其血药浓度。quercetin 三条清除通路全抑制，licochalcone A 为强效 BCRP 抑制剂（IC50≈6 nM）。
 
+## 🤖 智能体架构 / Agent architecture (HerbNetAgent 2.0)
+
+**创新性中药定量计算智能体蓝图**见 **[`docs/AGENT_ARCHITECTURE.md`](docs/AGENT_ARCHITECTURE.md)**——把 中药「成分→结构→亲和力→网络→PBPK暴露→QSP效应→安全」全链条定量打通、客观评估药效与药代。8 层架构(L0–L7)锚定最顶级研究：**Boltz-2/AlphaFold3**(结构+亲和力)、**Cheng/Barabási 网络互补暴露**(组合协同)、**ADMET-AI/ADMETlab 3.0 + PK-Sim/MoBi PBPK-QSP**(药代)、**ChemCrow/Coscientist**(LLM 编排)。本仓库 01–18 步即其**可运行原型**（L1–L7 纵切面已跑通）。
+
+![架构](results/figures/fig11_agent_architecture.png)
+
 ## 🔬 方法与数据源 / Pipeline & data sources
 
 全流程由公开一级数据库 API 驱动，**无人工挑数、可独立复现**：
@@ -80,6 +86,7 @@ python3 scripts/15_thrombus_pd_model.py# 概念性血栓消散PD模型
 python3 scripts/16_synergy_report.py   # 生成 docs/SYNERGY_AND_EXPERIMENTS.md + 图
 python3 scripts/17_fracture_targets.py # 骨折愈合靶点交叉+方向标注
 python3 scripts/18_fracture_report.py  # 生成 docs/FRACTURE_HEALING_ASSESSMENT.md + 图
+python3 scripts/19_agent_architecture.py # 智能体架构图 + 模块spec + docs/AGENT_ARCHITECTURE.md
 ```
 
 ## 🖼️ 主要图表 / Figures
