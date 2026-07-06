@@ -48,3 +48,11 @@ check_untyped_defs = false
 disallow_untyped_defs = false
 no_implicit_optional = false
 exclude = ["scripts", "notebooks"]
+
+# Treat `requests` as untyped everywhere so the module-level try/except fallback
+# (`requests = None`) and param dicts type-check identically whether or not the
+# runner has requests stubs installed. Keeps the gate deterministic across envs.
+[[tool.mypy.overrides]]
+module = ["requests", "requests.*"]
+follow_imports = "skip"
+ignore_missing_imports = true

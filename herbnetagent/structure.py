@@ -13,16 +13,12 @@ from __future__ import annotations
 
 import os
 
+import requests  # hard dependency (see pyproject)
+
 _HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(os.path.dirname(_HERE), "data", "structures")
 os.makedirs(CACHE, exist_ok=True)
-
-try:
-    import requests
-    _UA = {"User-Agent": "HerbNetAgent/2.0 (research)"}
-except Exception:
-    requests = None
-    _UA = {}
+_UA = {"User-Agent": "HerbNetAgent/2.0 (research)"}
 
 # curated gene -> reviewed human UniProt accession (Swiss-Prot)
 UNIPROT = {

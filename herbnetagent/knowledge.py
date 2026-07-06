@@ -13,16 +13,12 @@ import json
 import os
 import time
 
+import requests  # hard dependency (see pyproject)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROC = os.path.join(ROOT, "data", "processed")
 TABLES = os.path.join(ROOT, "results", "tables")
-
-try:
-    import requests
-    _UA = {"User-Agent": "HerbNetAgent/2.0 (research)"}
-except Exception:  # requests always present in this env, but stay defensive
-    requests = None
-    _UA = {}
+_UA = {"User-Agent": "HerbNetAgent/2.0 (research)"}
 
 
 def _read_csv(path):
