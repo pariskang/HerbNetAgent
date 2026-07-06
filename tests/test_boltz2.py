@@ -1,12 +1,21 @@
 """Tests for the Boltz-2 structure-based backend that need NO GPU:
 YAML generation, affinity-JSON parsing, unit conversion, and graceful
 fall-through when the boltz binary is absent (the CI/default case)."""
-import json, os, sys, tempfile
+import json
+import os
+import sys
+import tempfile
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from herbnetagent.boltz2 import (Boltz2Backend, build_yaml, parse_affinity,
-                                 boltz_value_to_nM, boltz_value_to_pic50)
 from herbnetagent.binding import BindingEngine, ChEMBLBackend
+from herbnetagent.boltz2 import (
+    Boltz2Backend,
+    boltz_value_to_nM,
+    boltz_value_to_pic50,
+    build_yaml,
+    parse_affinity,
+)
 from herbnetagent.knowledge import Knowledge
 
 
@@ -56,5 +65,6 @@ def test_backend_falls_through_without_boltz():
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:
-        fn(); print(f"PASS {fn.__name__}")
+        fn()
+        print(f"PASS {fn.__name__}")
     print(f"\n{len(fns)} tests passed")

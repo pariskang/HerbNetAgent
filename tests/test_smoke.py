@@ -1,11 +1,13 @@
 """Smoke + regression tests: the packaged agent must reproduce the manual
 01-19 pipeline's headline numbers (offline, from the cached knowledge)."""
-import os, sys
+import os
+import sys
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from herbnetagent import HerbNetAgent, Knowledge, Evidence
-from herbnetagent.pk import ReducedPBPK
+from herbnetagent import Evidence, HerbNetAgent, Knowledge
 from herbnetagent.binding import BindingEngine, ChEMBLBackend
+from herbnetagent.pk import ReducedPBPK
 
 
 def test_knowledge_loads():
@@ -54,5 +56,6 @@ def test_safety_verdict():
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:
-        fn(); print(f"PASS {fn.__name__}")
+        fn()
+        print(f"PASS {fn.__name__}")
     print(f"\n{len(fns)} tests passed")

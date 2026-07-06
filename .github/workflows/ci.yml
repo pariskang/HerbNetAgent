@@ -8,6 +8,25 @@ on:
   workflow_dispatch:
 
 jobs:
+  lint:
+    name: lint (ruff + mypy)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install lint tools + package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install ruff mypy
+      - name: Ruff (lint + import order)
+        run: ruff check herbnetagent/ tests/
+      - name: Mypy (type check)
+        run: mypy
+
   test:
     name: test (py${{ matrix.python-version }})
     runs-on: ubuntu-latest

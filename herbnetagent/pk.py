@@ -10,10 +10,11 @@ in scripts/12; here it is a reusable class the orchestrator calls for any
 perpetrator/victim pair.
 """
 from __future__ import annotations
+
 import numpy as np
 from scipy.integrate import solve_ivp
-from .core import Quantity, Evidence
 
+from .core import Evidence, Quantity
 
 # victim library: fractional clearance routes + PK, for AUCR prediction
 VICTIMS = {
@@ -70,7 +71,8 @@ class ReducedPBPK:
         y = [0, 0, 0, 0]
         auc = None
         for d in range(days):
-            y[0] += q; y[2] += R["dose_umol"]
+            y[0] += q
+            y[2] += R["dose_umol"]
             sol = solve_ivp(rhs, [0, 24], y, max_step=0.25, rtol=1e-7, atol=1e-9,
                             dense_output=True)
             y = [sol.y[i, -1] for i in range(4)]

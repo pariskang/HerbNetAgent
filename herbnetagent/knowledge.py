@@ -7,8 +7,11 @@ run; when a datum is missing we fall back to the live API (PubChem/ChEMBL/
 Open Targets/STRING). This is the layer that would grow into a knowledge graph.
 """
 from __future__ import annotations
-import csv, json, os, time
-from functools import lru_cache
+
+import csv
+import json
+import os
+import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROC = os.path.join(ROOT, "data", "processed")
@@ -59,7 +62,6 @@ class Knowledge:
                 for r in rows if float(r["max_assoc_score"]) >= min_score}
 
     # ---- live fallbacks (used only when cache misses) ------------------------
-    @lru_cache(maxsize=512)
     def chembl_targets_for_drug(self, chembl_id: str, pchembl_min: float = 6.0) -> tuple:
         """Measured human targets for an arbitrary drug (e.g. a co-administered
         Western drug not in the cached formula). Returns (gene, max_pchembl)."""
@@ -72,7 +74,7 @@ class Knowledge:
                                      "pchembl_value__gte": pchembl_min,
                                      "target_organism": "Homo sapiens", "limit": 200})
             acts = r.json().get("activities", [])
-            best = {}
+            best: dict[str, float] = {}
             for a in acts:
                 t, pv = a.get("target_chembl_id"), a.get("pchembl_value")
                 if t and pv:

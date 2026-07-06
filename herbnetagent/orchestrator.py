@@ -6,12 +6,13 @@ Wires the layers into one end-to-end assessment for a (formula, disease, [co-dru
 This is the programmatic form of the manual 01-19 pipeline.
 """
 from __future__ import annotations
-import json
-from .core import Registry, ProvenanceLog, Evidence, Quantity
+
+from .binding import BindingEngine, Boltz2Backend, ChEMBLBackend
+from .core import Evidence, ProvenanceLog, Registry
+from .efficacy import AXES, EfficacyEngine
 from .knowledge import Knowledge
-from .binding import BindingEngine, ChEMBLBackend, Boltz2Backend
-from .efficacy import EfficacyEngine, AXES
-from .pk import ReducedPBPK, VICTIMS
+from .pbpk import PBPKEngine
+from .pk import VICTIMS
 from .safety import SafetyEngine
 
 
@@ -26,6 +27,8 @@ class HerbNetAgent:
             [Boltz2Backend(knowledge=self.k),
              ChEMBLBackend(self.k.compound_targets())]), priority=1)
         self.reg.register("efficacy", EfficacyEngine(self.k), priority=1)
+        # L5 PBPK: whole-body PK-Sim/OSP if available, else reduced scipy model
+        self.reg.register("pbpk", PBPKEngine(), priority=1)
         self.reg.register("safety", SafetyEngine(self.k), priority=1)
 
     # ------------------------------------------------------------------ run
@@ -78,16 +81,20 @@ class HerbNetAgent:
         # L5/L6 PK — AUCR if a co-drug + perpetrator dose is supplied
         aucr = None
         if codrug and codrug_perpetrator_mg is not None and codrug in VICTIMS:
-            pbpk = ReducedPBPK(victim=codrug, perpetrator=perpetrator)
-            val_aucr = pbpk.validate()
-            aucr = pbpk.aucr(codrug_perpetrator_mg)
-            out["pk"] = {"aucr": aucr.to_dict(),
-                         "model_validation_strong_inhibitor_aucr": val_aucr,
-                         "graded": aucr.graded()}
-            self.prov.record("L5", "ReducedPBPK",
-                             {"victim": codrug, "perp_mg": codrug_perpetrator_mg},
-                             f"AUCR={aucr.value}x (validated {val_aucr}x)",
-                             Evidence.COMPUTATIONAL)
+            engine = self.reg.get("pbpk")
+            res = engine.aucr(codrug, perpetrator, codrug_perpetrator_mg)
+            if res is not None:
+                aucr = res["aucr"]
+                out["pk"] = {"aucr": aucr.to_dict(),
+                             "model_validation_strong_inhibitor_aucr":
+                                 res.get("validation_strong_inhibitor"),
+                             "backend": res.get("backend"),
+                             "graded": aucr.graded()}
+                self.prov.record("L5", res.get("backend", "PBPKEngine"),
+                                 {"victim": codrug, "perp_mg": codrug_perpetrator_mg},
+                                 f"AUCR={aucr.value}x "
+                                 f"(validated {res.get('validation_strong_inhibitor')}x)",
+                                 Evidence.COMPUTATIONAL)
 
         # L7 safety
         safety = self.reg.get("safety")
@@ -104,10 +111,10 @@ class HerbNetAgent:
     # --------------------------------------------------------------- report
     @staticmethod
     def render_markdown(res: dict) -> str:
-        L = []
+        L: list[str] = []
         w = L.append
         req = res["request"]
-        w(f"# HerbNetAgent 2.0 — 评估结果")
+        w("# HerbNetAgent 2.0 — 评估结果")
         w("")
         w(f"> 疾病: **{req['disease']}**"
           + (f" · 联用: **{req['codrug']}**" if req["codrug"] else "")
@@ -138,15 +145,18 @@ class HerbNetAgent:
         if "pk" in res:
             w("")
             w("## L5 药代 (PK / DDI)")
+            w(f"- 后端: **{res['pk'].get('backend', 'PBPK')}**")
             w(f"- 动态 PBPK 预测 **AUCR = {res['pk']['aucr']['value']}× "
               f"({res['pk']['graded']})**")
-            w(f"- 模型验证（强抑制剂）AUCR ≈ {res['pk']['model_validation_strong_inhibitor_aucr']}× "
-              f"(临床酮康唑 ~2.6×)")
+            val = res['pk'].get('model_validation_strong_inhibitor_aucr')
+            if val is not None:
+                w(f"- 模型验证（强抑制剂）AUCR ≈ {val}× (临床酮康唑 ~2.6×)")
         if "safety" in res:
             s = res["safety"]
             w("")
             w("## L7 安全 (Safety / DDI)")
-            w(f"- PK 相互作用：**{s['pk_interaction_level']}** · PD 出血叠加：**{s['pd_bleeding_additivity']}**")
+            w(f"- PK 相互作用：**{s['pk_interaction_level']}** · "
+              f"PD 出血叠加：**{s['pd_bleeding_additivity']}**")
             for f in s["flags"]:
                 w(f"  - {f}")
             w(f"- **结论**：{s['bottom_line']}")

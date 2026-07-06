@@ -70,6 +70,12 @@ print(res["safety"]["bottom_line"])                   # PK可忽略；主要为P
 `pk.py`(L5/L6 动态PBPK) · `safety.py`(L7 DDI/证据分级) · `orchestrator.py`(L0 编排) · `cli.py`。
 样例输出见 [`docs/AGENT_DEMO.md`](docs/AGENT_DEMO.md)。
 
+## 🧪 结构基础亲和力 (GPU) / Boltz-2 validation notebook
+
+**[`notebooks/boltz2_F2_MMP9_validation.ipynb`](notebooks/boltz2_F2_MMP9_validation.ipynb)** —— 在 Colab GPU 上用 **Boltz-2**（共折叠+亲和力）对 **F2/MMP9 × 方剂成分** 做真实预测，并与 **ChEMBL 实测 pChEMBL** 对比校验（相关性+RMSE），导出可回填 `Boltz2Backend` 缓存的预测值。
+
+L5 药代已支持 **PK-Sim/OSP 全身 PBPK 后端**（`herbnetagent/pbpk.py`，可插拔+回退）：装了 `ospsuite`+`.pkml` 即用全身 PBPK，否则回退经酮康唑校准的 reduced-PBPK。质量门禁 **ruff + mypy** 已并入 CI。
+
 ## 🔬 方法与数据源 / Pipeline & data sources
 
 全流程由公开一级数据库 API 驱动，**无人工挑数、可独立复现**：
@@ -116,6 +122,8 @@ python3 scripts/17_fracture_targets.py # 骨折愈合靶点交叉+方向标注
 python3 scripts/18_fracture_report.py  # 生成 docs/FRACTURE_HEALING_ASSESSMENT.md + 图
 python3 scripts/19_agent_architecture.py # 智能体架构图 + 模块spec + docs/AGENT_ARCHITECTURE.md
 python3 scripts/20_boltz2_affinity.py  # L3 结构基础亲和力: F2/MMP9 (有GPU则跑Boltz-2)
+python3 scripts/make_colab_boltz.py    # 生成 GPU Colab 验证 notebook
+ruff check herbnetagent/ tests/ && mypy  # 代码质量门禁 (CI 同款)
 ```
 
 ## 🖼️ 主要图表 / Figures

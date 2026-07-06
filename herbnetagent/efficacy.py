@@ -15,9 +15,14 @@ The interactome here is a STRING-induced subgraph over the relevant genes
 full interactome and is labelled as such — the metric structure is the point.
 """
 from __future__ import annotations
-import os, random, statistics
+
+import os
+import random
+import statistics
+
 import networkx as nx
-from .core import Quantity, Evidence, zscore
+
+from .core import zscore
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _CACHE = os.path.join(os.path.dirname(_HERE), "data", "processed", "interactome_edges.tsv")
@@ -26,8 +31,10 @@ _CACHE = os.path.join(os.path.dirname(_HERE), "data", "processed", "interactome_
 AXES = {
     "Coagulation":   ["F2", "F10", "F5", "F7", "F3", "F9", "SERPINC1", "PROC", "PROS1", "THBD", "TFPI"],
     "Fibrinolysis":  ["PLG", "PLAT", "PLAU", "SERPINE1", "SERPINB2"],
-    "Platelet":      ["PTGS1", "PTGS2", "ALOX12", "ALOX15", "TBXA2R", "P2RY12", "P2RY1", "ITGB3", "GP6", "GP1BA", "GRK6"],
-    "Thrombo-inflammation": ["NFKB1", "NLRP3", "JAK2", "STAT6", "IL2", "IL6", "IL1B", "TNF", "PIK3R1", "TLR4", "CXCL8"],
+    "Platelet":      ["PTGS1", "PTGS2", "ALOX12", "ALOX15", "TBXA2R", "P2RY12",
+                      "P2RY1", "ITGB3", "GP6", "GP1BA", "GRK6"],
+    "Thrombo-inflammation": ["NFKB1", "NLRP3", "JAK2", "STAT6", "IL2", "IL6",
+                             "IL1B", "TNF", "PIK3R1", "TLR4", "CXCL8"],
     "Resolution":    ["MMP2", "MMP9", "MMP12", "MMP14", "TIMP1"],
     "Endothelium":   ["KDR", "VEGFA", "NOS3", "HIF1A", "VWF", "SELE", "ICAM1", "VCAM1"],
 }
@@ -62,7 +69,7 @@ class InteractomeProximity:
         edges = []
         if use_cache and os.path.exists(_CACHE):
             with open(_CACHE) as f:
-                edges = [tuple(l.split("\t")[:2]) for l in f.read().strip().splitlines()]
+                edges = [tuple(ln.split("\t")[:2]) for ln in f.read().strip().splitlines()]
         if not edges:
             try:
                 edges = _fetch_string_edges(genes)

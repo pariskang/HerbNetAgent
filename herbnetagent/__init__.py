@@ -6,9 +6,9 @@ molecule → structure → affinity → network → PBPK exposure → QSP effect
 evidence-graded report. The manual 01-19 pipeline is refactored here into a
 reusable, provenance-tracking, uncertainty-aware library.
 """
-from .orchestrator import HerbNetAgent
-from .core import Quantity, Evidence, ProvenanceLog, Registry
+from .core import Evidence, ProvenanceLog, Quantity, Registry
 from .knowledge import Knowledge
+from .orchestrator import HerbNetAgent
 
 __version__ = "2.0.0"
 __all__ = ["HerbNetAgent", "Knowledge", "Quantity", "Evidence",

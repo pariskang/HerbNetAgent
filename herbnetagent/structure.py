@@ -10,6 +10,7 @@ skeleton is deterministic for F2/MMP9 etc.); anything else falls back to the
 UniProt REST search. Everything is cached under data/structures/.
 """
 from __future__ import annotations
+
 import os
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
@@ -95,4 +96,4 @@ class StructureProvider:
     @staticmethod
     def _read_fasta(fp: str) -> str:
         with open(fp) as f:
-            return "".join(l.strip() for l in f if not l.startswith(">"))
+            return "".join(ln.strip() for ln in f if not ln.startswith(">"))

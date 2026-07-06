@@ -17,9 +17,34 @@ dependencies = [
 
 [project.optional-dependencies]
 viz = ["matplotlib>=3.6"]
+dev = ["pytest", "ruff", "mypy"]
 
 [project.scripts]
 herbnetagent = "herbnetagent.cli:main"
 
 [tool.setuptools]
 packages = ["herbnetagent"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+# one-off analysis scripts and notebooks are not part of the library gate
+extend-exclude = ["scripts", "notebooks", "data", "results", "docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E741", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]         # sys.path shim before imports
+
+[tool.mypy]
+python_version = "3.10"
+files = ["herbnetagent"]
+ignore_missing_imports = true          # scipy/numpy/networkx/ospsuite have no stubs
+disable_error_code = ["import-untyped", "annotation-unchecked"]
+warn_unused_ignores = false
+check_untyped_defs = false
+disallow_untyped_defs = false
+no_implicit_optional = false
+exclude = ["scripts", "notebooks"]

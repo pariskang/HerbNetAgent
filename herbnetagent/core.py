@@ -7,10 +7,10 @@ Nothing in the agent returns a bare number: it returns a Quantity that knows
 how confident it is and where it came from.
 """
 from __future__ import annotations
-from dataclasses import dataclass, field, asdict
+
+from dataclasses import asdict, dataclass, field
 from enum import IntEnum
-from typing import Any, Callable
-import math, time
+from typing import Any
 
 
 class Evidence(IntEnum):
@@ -47,7 +47,9 @@ class Quantity:
         return f"{v}  ⟨{self.evidence.label}·{self.source or '—'}⟩"
 
     def to_dict(self) -> dict:
-        d = asdict(self); d["evidence"] = int(self.evidence); d["evidence_label"] = self.evidence.label
+        d = asdict(self)
+        d["evidence"] = int(self.evidence)
+        d["evidence_label"] = self.evidence.label
         return d
 
 

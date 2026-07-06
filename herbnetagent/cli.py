@@ -5,9 +5,13 @@ herbnetagent.cli — command-line entry point.
     python -m herbnetagent assess --disease "venous thrombosis" --json out.json
 """
 from __future__ import annotations
-import argparse, json, sys
-from .orchestrator import HerbNetAgent
+
+import argparse
+import json
+import sys
+
 from .knowledge import Knowledge
+from .orchestrator import HerbNetAgent
 
 
 def _cmd_assess(args):

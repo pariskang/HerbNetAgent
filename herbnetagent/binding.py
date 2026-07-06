@@ -7,8 +7,10 @@ Boltz2Backend is a stub with the exact call signature a GPU deployment would
 fill in — so the rest of the agent is written against the interface, not the tool.
 """
 from __future__ import annotations
+
 from typing import Protocol
-from .core import Quantity, Evidence, pchembl_to_nM
+
+from .core import Evidence, Quantity, pchembl_to_nM
 
 
 class BindingBackend(Protocol):
@@ -39,7 +41,7 @@ class ChEMBLBackend:
 
 # Real structure-based backend (Boltz-2 / AlphaFold3) lives in boltz2.py; it runs
 # where the `boltz` binary + GPU exist and otherwise falls through to ChEMBL.
-from .boltz2 import Boltz2Backend, AlphaFold3Backend  # noqa: E402,F401
+from .boltz2 import AlphaFold3Backend, Boltz2Backend  # noqa: E402,F401
 
 
 class BindingEngine:

@@ -6,7 +6,8 @@ project's honesty policy, never upgrades a computational prediction to a clinica
 claim. Also flags pharmacodynamic (bleeding) additivity that PK numbers miss.
 """
 from __future__ import annotations
-from .core import Quantity, Evidence
+
+from .core import Evidence, Quantity
 
 # formula constituents with known bleeding-relevant pharmacology not captured by
 # the small-molecule PK model (the peptide anticoagulant is the key blind spot)

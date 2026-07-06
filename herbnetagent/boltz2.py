@@ -16,6 +16,7 @@ NOTE: verify the numeric convention against your installed Boltz-2 version befor
 using values quantitatively — it has changed across releases.
 """
 from __future__ import annotations
+
 import glob
 import json
 import os
@@ -23,7 +24,7 @@ import shutil
 import subprocess
 import tempfile
 
-from .core import Quantity, Evidence
+from .core import Evidence, Quantity
 from .structure import StructureProvider
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
