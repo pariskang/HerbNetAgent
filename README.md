@@ -42,6 +42,32 @@ intermuscular (distal) venous thrombosis**.
 
 ![架构](results/figures/fig11_agent_architecture.png)
 
+## 📦 安装与使用 / Install & use the agent (implemented)
+
+架构已**落地为可安装的 Python 包 `herbnetagent/`**——把 01–19 步流程重构为可复用、
+带**溯源/不确定度/证据分级**、引擎可插拔的智能体，一条命令端到端评估药效+药代。
+
+```bash
+pip install -e .                 # 安装 (herbnetagent 2.0)
+python -m herbnetagent info      # 查看能力与缓存知识
+# 端到端评估：方剂 × 静脉血栓 × 利伐沙班(联用) × 1.5g蜜丸递送的quercetin剂量
+python -m herbnetagent assess --codrug rivaroxaban --perpetrator-mg 0.006 --md out.md
+python tests/test_smoke.py       # 5 项回归测试 (复现手工流程数值)
+```
+
+```python
+from herbnetagent import HerbNetAgent
+res = HerbNetAgent().assess(codrug="rivaroxaban", codrug_perpetrator_mg=0.006)
+print(res["efficacy"]["complementary_exposure"])      # True (Cheng/Barabási)
+print(res["pk"]["aucr"]["value"])                     # 1.035  (利伐沙班 AUCR)
+print(res["safety"]["bottom_line"])                   # PK可忽略；主要为PD出血叠加
+```
+
+**包结构（对应架构 L0–L7）**：`core.py`(证据/不确定度/溯源/注册) · `knowledge.py`(L1 数据) ·
+`binding.py`(L3 结合，ChEMBL实测 + Boltz-2可插拔) · `efficacy.py`(L4 网络邻近度/互补暴露) ·
+`pk.py`(L5/L6 动态PBPK) · `safety.py`(L7 DDI/证据分级) · `orchestrator.py`(L0 编排) · `cli.py`。
+样例输出见 [`docs/AGENT_DEMO.md`](docs/AGENT_DEMO.md)。
+
 ## 🔬 方法与数据源 / Pipeline & data sources
 
 全流程由公开一级数据库 API 驱动，**无人工挑数、可独立复现**：

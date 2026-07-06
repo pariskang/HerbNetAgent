@@ -1,0 +1,243 @@
+{
+ "request": {
+  "disease": "venous thrombosis",
+  "codrug": "rivaroxaban",
+  "perpetrator_mg": 0.006
+ },
+ "efficacy": {
+  "n_formula_targets": 208,
+  "n_disease_module": 626,
+  "shared_targets": [
+   "ALOX12",
+   "ALOX15",
+   "CDK6",
+   "DAPK1",
+   "F2",
+   "GRK6",
+   "IL2",
+   "JAK2",
+   "MAPT",
+   "NEK6",
+   "NFKB1",
+   "NLRP3",
+   "PIK3R1",
+   "PTGS1",
+   "PTGS2",
+   "STAT6"
+  ],
+  "formula_axis_coverage": {
+   "Coagulation": [
+    "F2"
+   ],
+   "Platelet": [
+    "ALOX12",
+    "ALOX15",
+    "GRK6",
+    "PTGS1",
+    "PTGS2"
+   ],
+   "Thrombo-inflammation": [
+    "IL2",
+    "JAK2",
+    "NFKB1",
+    "NLRP3",
+    "PIK3R1",
+    "STAT6"
+   ],
+   "Resolution": [
+    "MMP12",
+    "MMP2",
+    "MMP9"
+   ],
+   "Endothelium": [
+    "HIF1A",
+    "KDR"
+   ]
+  },
+  "codrug_targets": [
+   "F10",
+   "F2"
+  ],
+  "codrug_axis_coverage": {
+   "Coagulation": [
+    "F10",
+    "F2"
+   ]
+  },
+  "target_overlap": [
+   "F2"
+  ],
+  "jaccard": 0.0048,
+  "combined_axis_coverage": {
+   "Coagulation": [
+    "F10",
+    "F2"
+   ],
+   "Platelet": [
+    "ALOX12",
+    "ALOX15",
+    "GRK6",
+    "PTGS1",
+    "PTGS2"
+   ],
+   "Thrombo-inflammation": [
+    "IL2",
+    "JAK2",
+    "NFKB1",
+    "NLRP3",
+    "PIK3R1",
+    "STAT6"
+   ],
+   "Resolution": [
+    "MMP12",
+    "MMP2",
+    "MMP9"
+   ],
+   "Endothelium": [
+    "HIF1A",
+    "KDR"
+   ]
+  },
+  "formula_adds_axes": [
+   "Platelet",
+   "Thrombo-inflammation",
+   "Resolution",
+   "Endothelium"
+  ],
+  "network_proximity_formula": {
+   "d": 0.941,
+   "z": 18.07,
+   "proximal": false
+  },
+  "network_note": "proximity z uses a STRING-induced subgraph (module-biased null) — interpret cautiously; the robust complementarity signals are separation and module engagement.",
+  "network_proximity_codrug": {
+   "d": 0,
+   "z": -1.06,
+   "proximal": true
+  },
+  "separation_formula_codrug": 2.137,
+  "complementary_exposure": true,
+  "complementary_exposure_basis": {
+   "formula_engages_module": true,
+   "codrug_engages_module": true,
+   "topologically_separated": true,
+   "separation": 2.137,
+   "jaccard": 0.0048
+  }
+ },
+ "binding_highlights": {
+  "ALOX12": {
+   "compound": "quercetin",
+   "affinity": "436.5 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "ALOX15": {
+   "compound": "baicalein",
+   "affinity": "602.6 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "CDK6": {
+   "compound": "fisetin",
+   "affinity": "851.1 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "DAPK1": {
+   "compound": "isoliquiritigenin",
+   "affinity": "2454.7 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "F2": {
+   "compound": "quercetin",
+   "affinity": "38.9 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "GRK6": {
+   "compound": "scutellarein",
+   "affinity": "6606.9 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "IL2": {
+   "compound": "formononetin",
+   "affinity": "5495.4 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  },
+  "JAK2": {
+   "compound": "sulfuretin",
+   "affinity": "9332.5 nM (Ki/IC50-eq)  ⟨体外实测·ChEMBL⟩"
+  }
+ },
+ "pk": {
+  "aucr": {
+   "value": 1.035,
+   "unit": "x AUC",
+   "ci": null,
+   "evidence": 1,
+   "source": "reduced-PBPK(rivaroxaban/quercetin)",
+   "note": "perp 0.006 mg; +3.5% exposure",
+   "evidence_label": "计算预测"
+  },
+  "model_validation_strong_inhibitor_aucr": 2.48,
+  "graded": "1.035 x AUC  ⟨计算预测·reduced-PBPK(rivaroxaban/quercetin)⟩"
+ },
+ "safety": {
+  "pk_interaction_level": "negligible",
+  "pd_bleeding_additivity": true,
+  "flags": [
+   "victim exposure 1.03x (negligible)  ⟨计算预测·reduced-PBPK(rivaroxaban/quercetin)⟩",
+   "additive bleeding risk (PD)  ⟨计算预测·mechanism-coverage⟩"
+  ],
+  "bottom_line": "PK 相互作用可忽略；主要残余风险为 PD 出血叠加 —— 需临床监护，不作为自我用药依据（证据仅达计算级）",
+  "evidence_ceiling": "计算预测"
+ },
+ "disclaimer": "本智能体所有输出的最高证据等级为 **计算预测**；临床用药决策须由医师依据体外/动物/RCT 证据个体化判断。",
+ "provenance": [
+  {
+   "layer": "L1",
+   "tool": "Knowledge",
+   "inputs": {
+    "disease": "venous thrombosis"
+   },
+   "summary": "208 formula targets, 3286 disease genes",
+   "evidence": "体外实测"
+  },
+  {
+   "layer": "L4",
+   "tool": "EfficacyEngine",
+   "inputs": {
+    "codrug": "rivaroxaban"
+   },
+   "summary": "16 shared targets; complementary_exposure=True",
+   "evidence": "计算预测"
+  },
+  {
+   "layer": "L3",
+   "tool": "BindingEngine",
+   "inputs": {
+    "targets": [
+     "ALOX12",
+     "ALOX15",
+     "CDK6",
+     "DAPK1",
+     "F2",
+     "GRK6",
+     "IL2",
+     "JAK2"
+    ]
+   },
+   "summary": "annotated 8 targets (backend: ChEMBL(measured))",
+   "evidence": "体外实测"
+  },
+  {
+   "layer": "L5",
+   "tool": "ReducedPBPK",
+   "inputs": {
+    "victim": "rivaroxaban",
+    "perp_mg": 0.006
+   },
+   "summary": "AUCR=1.035x (validated 2.48x)",
+   "evidence": "计算预测"
+  },
+  {
+   "layer": "L7",
+   "tool": "SafetyEngine",
+   "inputs": {
+    "codrug": "rivaroxaban"
+   },
+   "summary": "PK 相互作用可忽略；主要残余风险为 PD 出血叠加 —— 需临床监护，不作为自我用药依据（证据仅达计算级）",
+   "evidence": "计算预测"
+  }
+ ]
+}
