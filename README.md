@@ -1,5 +1,7 @@
 # HerbNetAgent — 大黄蛰虫丸 × 下肢肌间静脉血栓 网络药理学评估
 
+[![CI](https://github.com/pariskang/HerbNetAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/pariskang/HerbNetAgent/actions/workflows/ci.yml)
+
 Reproducible network-pharmacology assessment of whether **Dahuang Zhechong Wan
 (大黄蛰虫丸)** has a plausible mechanistic basis for treating **lower-limb
 intermuscular (distal) venous thrombosis**.
@@ -113,6 +115,7 @@ python3 scripts/16_synergy_report.py   # 生成 docs/SYNERGY_AND_EXPERIMENTS.md 
 python3 scripts/17_fracture_targets.py # 骨折愈合靶点交叉+方向标注
 python3 scripts/18_fracture_report.py  # 生成 docs/FRACTURE_HEALING_ASSESSMENT.md + 图
 python3 scripts/19_agent_architecture.py # 智能体架构图 + 模块spec + docs/AGENT_ARCHITECTURE.md
+python3 scripts/20_boltz2_affinity.py  # L3 结构基础亲和力: F2/MMP9 (有GPU则跑Boltz-2)
 ```
 
 ## 🖼️ 主要图表 / Figures

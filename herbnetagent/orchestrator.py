@@ -20,9 +20,11 @@ class HerbNetAgent:
         self.k = knowledge or Knowledge()
         self.prov = ProvenanceLog()
         self.reg = Registry()
-        # L3 binding: measured first, predicted (Boltz-2) as future backend
+        # L3 binding: try structure-based prediction (Boltz-2, if a GPU/binary is
+        # present) then fall back to measured ChEMBL affinities.
         self.reg.register("binding", BindingEngine(
-            [Boltz2Backend(), ChEMBLBackend(self.k.compound_targets())]), priority=1)
+            [Boltz2Backend(knowledge=self.k),
+             ChEMBLBackend(self.k.compound_targets())]), priority=1)
         self.reg.register("efficacy", EfficacyEngine(self.k), priority=1)
         self.reg.register("safety", SafetyEngine(self.k), priority=1)
 

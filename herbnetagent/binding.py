@@ -37,23 +37,9 @@ class ChEMBLBackend:
                         note=f"pChEMBL={pv:.2f}")
 
 
-class Boltz2Backend:
-    """Stub for co-folding + affinity prediction (Boltz-2 / AlphaFold3).
-
-    A GPU deployment implements `affinity` by co-folding the compound SMILES with
-    the target structure and reading the affinity head. Kept as a stub so the
-    agent's interface is real even where the model isn't installed here.
-    """
-    name = "Boltz-2(predicted)"
-    evidence = Evidence.COMPUTATIONAL
-
-    def __init__(self, structure_provider=None):
-        self.structure_provider = structure_provider
-
-    def affinity(self, compound: str, gene: str) -> Quantity | None:
-        # No GPU in this environment: signal 'not available' so the engine
-        # falls through to the measured backend rather than fabricating a number.
-        return None
+# Real structure-based backend (Boltz-2 / AlphaFold3) lives in boltz2.py; it runs
+# where the `boltz` binary + GPU exist and otherwise falls through to ChEMBL.
+from .boltz2 import Boltz2Backend, AlphaFold3Backend  # noqa: E402,F401
 
 
 class BindingEngine:
