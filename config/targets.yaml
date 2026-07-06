@@ -1,0 +1,17 @@
+# L2/L3 target registry — gene -> reviewed human UniProt accession.
+# Used by StructureProvider to fetch sequence + AlphaFold structure for Boltz-2.
+# The two headline targets requested for structure-based affinity:
+targets:
+  F2:                     # thrombin / prothrombin — top venous-thrombosis gene, hit by quercetin
+    uniprot: P00734
+    role: coagulation cascade endpoint
+    boltz2_probe_compounds: [quercetin, "beta-sitosterol"]
+  MMP9:                   # gelatinase B — thrombus resolution / remodeling, hit by isoliquiritigenin
+    uniprot: P14780
+    role: thrombus resolution / ECM remodeling
+    boltz2_probe_compounds: [isoliquiritigenin, quercetin, luteolin]
+  # additional mechanism targets available in the registry:
+  PTGS2:  { uniprot: P35354, role: platelet/inflammation (COX-2) }
+  ALOX12: { uniprot: P18054, role: platelet 12-lipoxygenase }
+  KDR:    { uniprot: P35968, role: VEGFR2 / endothelium }
+  NLRP3:  { uniprot: Q96P20, role: thrombo-inflammation }

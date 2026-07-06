@@ -1,0 +1,49 @@
+{
+ "bone_union_genes": 2742,
+ "formula_bone_intersection": [
+  "ESR1",
+  "SOST",
+  "ESR2",
+  "AR",
+  "CYP19A1",
+  "CTNNB1",
+  "TNKS",
+  "CDK9",
+  "PRKCA",
+  "NPSR1",
+  "CA6",
+  "DPP4",
+  "CYP1B1",
+  "PTGS2",
+  "SRC",
+  "PIK3R1",
+  "NPC1",
+  "YES1",
+  "PIM1",
+  "MKNK2",
+  "CBR1",
+  "PPARG",
+  "TTR",
+  "SMN1",
+  "HIF1A"
+ ],
+ "n_intersection": 47,
+ "adverse": [
+  "PTGS2",
+  "PTGS1",
+  "KDR",
+  "MMP9",
+  "MMP2",
+  "F2",
+  "F10"
+ ],
+ "favorable": [
+  "NLRP3",
+  "ESR1",
+  "CTNNB1"
+ ],
+ "mixed": [
+  "HIF1A",
+  "NFKB1"
+ ]
+}

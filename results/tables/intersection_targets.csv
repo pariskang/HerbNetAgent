@@ -1,0 +1,117 @@
+gene,disease_score,top_disease,drug_max_pchembl,n_compounds,degree,betweenness,closeness,meaningful_assoc
+TP53,0.0432,thrombophilia,6.2,8,80,0.0879,0.7488,0
+AKT1,0.0649,deep vein thrombosis,5.27,1,77,0.0588,0.7388,0
+BCL2,0.0442,thrombophilia,8.0,1,71,0.0371,0.7056,0
+EGFR,0.0285,deep vein thrombosis,6.05,2,69,0.0489,0.6967,0
+CTNNB1,0.0037,venous thromboembolism,5.3,1,67,0.0372,0.6837,0
+ESR1,0.0318,deep vein thrombosis,6.11,4,63,0.0492,0.6712,0
+NFKB1,0.3785,deep vein thrombosis,5.25,1,62,0.0258,0.6712,1
+SRC,0.0081,deep vein thrombosis,6.92,1,61,0.0475,0.6631,0
+PPARG,0.0377,deep vein thrombosis,5.39,1,60,0.0419,0.6591,0
+HIF1A,0.0243,deep vein thrombosis,6.4,5,60,0.0251,0.6591,0
+MMP9,0.0758,deep vein thrombosis,8.0,3,58,0.0277,0.6552,0
+PTGS2,0.4681,thrombotic disease,5.97,2,57,0.0343,0.6475,1
+GSK3B,0.0126,deep vein thrombosis,5.82,4,48,0.0131,0.615,0
+JAK2,0.4211,deep vein thrombosis,5.03,1,46,0.0159,0.6048,1
+MMP2,0.0747,deep vein thrombosis,8.0,3,46,0.0104,0.6048,0
+CREB1,0.0188,deep vein thrombosis,5.66,1,42,0.011,0.5918,0
+KDR,0.0554,thrombotic disease,6.55,1,40,0.0094,0.5887,0
+PIK3R1,0.2101,deep vein thrombosis,5.42,1,40,0.0058,0.5763,1
+IL2,0.1664,deep vein thrombosis,5.26,1,39,0.0128,0.5855,1
+MCL1,0.0096,deep vein thrombosis,5.81,1,39,0.0071,0.5794,0
+PIK3CA,0.0098,deep vein thrombosis,5.19,1,39,0.0045,0.5763,0
+MAPK1,0.0136,deep vein thrombosis,5.5,3,38,0.0056,0.5763,0
+BRAF,0.0554,thrombotic disease,5.12,1,35,0.0027,0.5704,0
+PPARA,0.0359,thrombophilia,6.22,1,34,0.0083,0.5674,0
+IGF1R,0.0043,deep vein thrombosis,6.52,1,34,0.0022,0.5674,0
+ABCG2,0.0411,thrombophilia,8.21,5,33,0.0213,0.5674,0
+APP,0.0771,thrombophilia,6.09,2,33,0.0196,0.5645,0
+AR,0.0739,thrombophilia,5.28,2,33,0.0049,0.5588,0
+MET,0.0048,venous thromboembolism,6.24,1,33,0.0029,0.5588,0
+ABCB1,0.0063,deep vein thrombosis,5.17,3,32,0.009,0.5559,0
+TERT,0.005,deep vein thrombosis,5.07,1,30,0.007,0.5449,0
+ESR2,0.0337,thrombophilia,7.44,4,30,0.006,0.5476,0
+CDK4,0.0146,venous thromboembolism,5.55,1,30,0.0029,0.5504,0
+CREBBP,0.0398,thrombophilia,5.1,1,30,0.0026,0.5504,0
+STAT6,0.327,deep vein thrombosis,5.6,1,28,0.0059,0.537,1
+SYK,0.058,thrombophilia,5.52,3,28,0.0025,0.5449,0
+PRKCA,0.0063,deep vein thrombosis,5.03,1,28,0.0021,0.5423,0
+CYP3A4,0.0458,venous thromboembolism,5.9,11,27,0.0106,0.5396,0
+CYP19A1,0.0324,thrombophilia,8.54,7,27,0.0101,0.5423,0
+PTK2,0.005,thrombophilia,5.92,1,27,0.0044,0.5423,0
+MPO,0.0627,deep vein thrombosis,5.94,3,26,0.0114,0.5423,0
+SLC2A1,0.0053,deep vein thrombosis,5.4,1,26,0.0011,0.5423,0
+MMP1,0.0654,deep vein thrombosis,7.8,1,25,0.0026,0.537,0
+MMP3,0.0361,deep vein thrombosis,7.09,2,25,0.0022,0.537,0
+CDK1,0.0074,thrombophilia,6.35,1,25,0.0016,0.5292,0
+IDH1,0.016,venous thromboembolism,5.55,1,24,0.0024,0.5192,0
+CDK6,0.1648,venous thromboembolism,6.07,3,23,0.0008,0.5242,1
+XDH,0.0074,thrombotic disease,6.55,6,22,0.0131,0.5242,0
+SNCA,0.003,venous thromboembolism,5.35,2,22,0.0053,0.5344,0
+CYP1A1,0.0131,pulmonary embolism,6.41,6,22,0.0041,0.5267,0
+MAPT,0.186,venous thromboembolism,5.9,11,22,0.0028,0.5217,1
+FLT3,0.0554,thrombotic disease,6.29,6,22,0.0011,0.512,0
+ALK,0.0215,deep vein thrombosis,5.48,1,22,0.0009,0.5242,0
+CYP2C9,0.0193,deep vein thrombosis,8.9,7,21,0.0062,0.5168,0
+JAK3,0.0091,deep vein thrombosis,5.37,1,21,0.0029,0.5049,0
+MAOA,0.0066,deep vein thrombosis,6.19,6,20,0.0077,0.5192,0
+CYP1A2,0.0043,deep vein thrombosis,7.2,7,20,0.0045,0.512,0
+PKM,0.0607,deep vein thrombosis,6.05,3,20,0.0015,0.5168,0
+MMP7,0.0066,pulmonary embolism,8.1,1,20,0.0014,0.5217,0
+NLRP3,0.2157,venous thromboembolism,5.81,2,20,0.0014,0.5168,1
+NOX4,0.0074,pulmonary embolism,6.17,4,20,0.0007,0.5217,0
+ELAVL1,0.0137,deep vein thrombosis,5.85,1,19,0.0034,0.512,0
+AXL,0.0022,thrombophilia,6.02,1,18,0.0001,0.5004,0
+BACE1,0.037,thrombotic disease,8.2,4,17,0.0019,0.5004,0
+BTK,0.0118,deep vein thrombosis,5.22,1,17,0.0018,0.4981,0
+ACHE,0.0028,thrombophilia,7.92,3,17,0.0016,0.5144,0
+MMP13,0.0476,deep vein thrombosis,7.85,3,17,0.0009,0.4981,0
+CYP2C19,0.0182,deep vein thrombosis,5.4,7,16,0.0023,0.4511,0
+UGT1A1,0.0088,thrombophilia,6.01,2,16,0.0021,0.5026,0
+CD38,0.0074,deep vein thrombosis,5.09,1,16,0.0011,0.4871,0
+CDK5,0.0059,thrombophilia,5.82,1,16,0.0006,0.4958,0
+LMNA,0.0435,thrombophilia,8.25,5,16,0.0006,0.5026,0
+CXCR1,0.0082,deep vein thrombosis,5.35,1,15,0.0157,0.4828,0
+PTGS1,0.4677,thrombotic disease,5.45,1,15,0.0025,0.5004,1
+KDM1A,0.0015,deep vein thrombosis,5.9,5,15,0.0022,0.4936,0
+CYP2D6,0.003,thrombophilia,5.0,2,15,0.0021,0.4568,0
+ELANE,0.0089,deep vein thrombosis,5.21,2,14,0.002,0.4892,0
+ALOX5,0.0028,deep vein thrombosis,6.1,3,13,0.0017,0.4786,0
+DPP4,0.0335,venous thromboembolism,6.92,6,13,0.0007,0.4981,0
+THPO,0.0122,thrombophilia,6.3,1,12,0.0009,0.4724,0
+SIRT6,0.0168,deep vein thrombosis,5.72,2,12,0.0006,0.4786,0
+APEX1,0.003,deep vein thrombosis,6.2,2,12,0.0004,0.4745,0
+TEK,0.005,deep vein thrombosis,6.02,1,12,0.0002,0.4849,0
+F2,0.7952,thrombophilia,7.41,2,11,0.0032,0.4549,1
+CFTR,0.0189,thrombophilia,5.32,1,11,0.0022,0.4892,0
+MMP12,0.0214,pulmonary embolism,6.01,1,11,0.0002,0.4606,0
+ESRRA,0.0015,deep vein thrombosis,5.02,1,11,0.0,0.4936,0
+TTR,0.0095,deep vein thrombosis,7.16,4,10,0.0019,0.4786,0
+ALOX15,0.1908,deep vein thrombosis,6.22,7,10,0.0009,0.453,1
+ADAMTS4,0.0391,deep vein thrombosis,5.01,1,9,0.0,0.4475,0
+ITK,0.0092,thrombophilia,5.7,1,9,0.0,0.4421,0
+SLCO2B1,0.003,thrombophilia,6.46,5,9,0.0,0.4317,0
+TSHR,0.0044,thrombophilia,5.6,4,9,0.0,0.4786,0
+SHBG,0.0632,deep vein thrombosis,6.02,1,8,0.0011,0.453,0
+FABP4,0.003,deep vein thrombosis,6.73,1,8,0.0002,0.4645,0
+PSMB5,0.0037,thrombophilia,6.0,5,7,0.0005,0.4606,0
+ALOX12,0.2941,venous thromboembolism,6.36,4,7,0.0004,0.417,1
+NEK2,0.0284,deep vein thrombosis,5.24,1,7,0.0004,0.4664,0
+AHR,0.0119,deep vein thrombosis,7.55,1,7,0.0001,0.4457,0
+CCR4,0.0264,deep vein thrombosis,5.0,1,6,0.003,0.4218,0
+TNKS,0.0517,venous thromboembolism,5.62,2,6,0.0003,0.43,0
+SMN1,0.0047,deep vein thrombosis,5.55,2,6,0.0002,0.453,0
+HSD17B2,0.0188,venous thromboembolism,6.44,4,6,0.0,0.4185,0
+FTO,0.0186,deep vein thrombosis,5.66,5,5,0.0011,0.4185,0
+CA2,0.0126,deep vein thrombosis,5.65,4,5,0.0002,0.4493,0
+DAPK1,0.1907,thrombophilia,5.61,3,5,0.0,0.4511,1
+PIM1,0.0015,deep vein thrombosis,7.6,2,4,0.0,0.4334,0
+NPC1,0.0022,deep vein thrombosis,5.25,2,3,0.0002,0.3669,0
+DAO,0.0022,deep vein thrombosis,5.7,1,3,0.0,0.3744,0
+GRK6,0.1183,thrombotic disease,5.18,2,2,0.0,0.3247,1
+L3MBTL1,0.0497,thrombophilia,7.2,1,2,0.0,0.4267,0
+SLC2A9,0.0479,thrombophilia,5.58,1,2,0.0,0.3719,0
+ADORA3,0.0423,thrombophilia,5.38,1,1,0.0,0.396,0
+CA5A,0.0545,pulmonary embolism,5.39,2,0,0.0,0.0,0
+GBA1,0.0579,thrombophilia,5.4,1,0,0.0,0.0,0
+NEK6,0.2619,deep vein thrombosis,5.37,1,0,0.0,0.0,1

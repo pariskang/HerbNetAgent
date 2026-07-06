@@ -1,0 +1,117 @@
+{
+ "pk_modulation": {
+  "CYP3A4": [
+   [
+    "paeonol",
+    5.9
+   ],
+   [
+    "apigenin",
+    5.9
+   ],
+   [
+    "quercetin",
+    5.68
+   ],
+   [
+    "isoliquiritigenin",
+    5.4
+   ],
+   [
+    "luteolin",
+    5.3
+   ],
+   [
+    "naringenin",
+    5.3
+   ],
+   [
+    "glabridin",
+    5.16
+   ],
+   [
+    "kaempferol",
+    5.1
+   ],
+   [
+    "baicalein",
+    5.04
+   ],
+   [
+    "emodin",
+    5.0
+   ],
+   [
+    "rhein",
+    5.0
+   ],
+   [
+    "formononetin",
+    4.8
+   ],
+   [
+    "chrysophanol",
+    4.6
+   ],
+   [
+    "fisetin",
+    4.6
+   ]
+  ],
+  "ABCB1/P-gp": [
+   [
+    "kaempferol",
+    5.17
+   ],
+   [
+    "quercetin",
+    5.15
+   ],
+   [
+    "apigenin",
+    5.0
+   ],
+   [
+    "luteolin",
+    4.71
+   ],
+   [
+    "baicalein",
+    4.39
+   ],
+   [
+    "licochalcone A",
+    4.02
+   ]
+  ],
+  "ABCG2/BCRP": [
+   [
+    "licochalcone A",
+    8.21
+   ],
+   [
+    "quercetin",
+    7.52
+   ],
+   [
+    "apigenin",
+    5.51
+   ],
+   [
+    "kaempferol",
+    5.33
+   ],
+   [
+    "luteolin",
+    5.05
+   ]
+  ]
+ },
+ "pd_coag_platelet_overlap": {
+  "F2": "凝血酶(thrombin)",
+  "PTGS1": "COX-1(血小板)",
+  "PTGS2": "COX-2(血小板/炎症)",
+  "ALOX12": "12-脂氧合酶(血小板)",
+  "ALOX15": "15-脂氧合酶"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "name": "HerbNetAgent 2.0",
+ "subtitle": "Quantitative Multi-Scale TCM Intelligence Agent",
+ "pipeline": "molecule -> structure -> affinity -> network -> PBPK exposure -> QSP effect -> safety -> evidence-graded report",
+ "layers": [
+  {
+   "id": "L0",
+   "title": "Orchestration & Reasoning (LLM agent core)",
+   "methods": [
+    "planner",
+    "tool-router",
+    "memory",
+    "uncertainty & provenance tracker  [ChemCrow/Coscientist-style]"
+   ],
+   "prototype": "steps 01-18 driver"
+  },
+  {
+   "id": "L1",
+   "title": "Knowledge & Data Layer  (unified knowledge graph)",
+   "methods": [
+    "TCMSP",
+    "HERB",
+    "BATMAN-TCM 2.0",
+    "SymMap | PubChem",
+    "ChEMBL | Open Targets",
+    "STRING",
+    "KEGG/Reactome | FAERS/TCM-drug PV"
+   ],
+   "prototype": "steps 01-03"
+  },
+  {
+   "id": "L2",
+   "title": "Molecular Representation & Structure",
+   "methods": [
+    "compound QC (RDKit)",
+    "quantitative content (UPLC-MS/MS)",
+    "protein structure (AlphaFold3 / ESMFold)"
+   ],
+   "prototype": "steps 01,10"
+  },
+  {
+   "id": "L3",
+   "title": "Binding & Target-Engagement Engine",
+   "methods": [
+    "co-folding + affinity (Boltz-2 / AlphaFold3 / Chai-1)",
+    "docking (DiffDock/Vina)",
+    "FEP",
+    "target pred (SwissTP/SEA)"
+   ],
+   "prototype": "step 02 (ChEMBL)"
+  },
+  {
+   "id": "L4",
+   "title": "Network & EFFICACY (yaoxiao) Engine",
+   "methods": [
+    "disease module",
+    "network proximity + Complementary Exposure (Cheng/Barabasi)",
+    "enrichment",
+    "combo synergy"
+   ],
+   "prototype": "steps 04,05,14,17"
+  },
+  {
+   "id": "L5",
+   "title": "ADMET / PK (yaodai) Engine",
+   "methods": [
+    "ADMET-AI",
+    "ADMETlab 3.0 (CYP/transporter/tox) -> whole-body PBPK/QSP (PK-Sim/MoBi)",
+    "virtual populations",
+    "DDI"
+   ],
+   "prototype": "steps 08,10,12"
+  },
+  {
+   "id": "L6",
+   "title": "Systems PD & Outcome Simulation",
+   "methods": [
+    "QSP ODE: exposure->target->pathway->phenotype (coagulation-thrombus-bleeding)",
+    "tissue models (fracture)"
+   ],
+   "prototype": "steps 12,15,18"
+  },
+  {
+   "id": "L7",
+   "title": "Safety, Toxicology & Clinical Translation",
+   "methods": [
+    "ProTox/hERG/DILI",
+    "DDI & contraindication",
+    "evidence-grading (compute vs clinical)",
+    "auto validation protocols"
+   ],
+   "prototype": "steps 09,11,16,briefing"
+  }
+ ],
+ "cross_cutting": [
+  "Uncertainty Quantification",
+  "Provenance / Explainability",
+  "Human-in-the-loop clinical guardrails"
+ ],
+ "efficacy_engine": "L2->L3->L4 (structure->affinity->network proximity/Complementary Exposure)",
+ "pk_engine": "L2->L5->L6 (ADMET-AI/ADMETlab -> PBPK PK-Sim -> QSP PD)"
+}

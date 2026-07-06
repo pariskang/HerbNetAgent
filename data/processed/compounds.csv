@@ -1,0 +1,47 @@
+compound,herbs_zh,n_herbs,pubchem_cid,smiles
+emodin,大黄,1,3220,CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=C(C=C3O)O
+aloe-emodin,大黄,1,10207,C1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=C(C=C3O)CO
+rhein,大黄,1,10168,C1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=C(C=C3O)C(=O)O
+chrysophanol,大黄,1,10208,CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=CC=C3O
+physcion,大黄,1,10639,CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=C(C=C3O)OC
+emodin-8-glucoside,大黄,1,99649,CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=C(C=C3O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O)O
+torachrysone,大黄,1,5321977,CC1=CC2=CC(=CC(=C2C(=C1C(=O)C)O)O)OC
+sennoside A,大黄,1,73111,C1=CC2=C(C(=C1)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)C(=O)C4=C([C@@H]2[C@@H]5C6=C(C(=CC=C6)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)CO)O)O)O)C(=O)C8=C5C=C(C=C8O)C(=O)O)C=C(C=C4O)C(=O)O
+baicalein,黄芩,1,5281605,C1=CC=C(C=C1)C2=CC(=O)C3=C(O2)C=C(C(=C3O)O)O
+baicalin,黄芩,1,64982,C1=CC=C(C=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)C(=O)O)O)O)O)O)O
+wogonin,黄芩,1,5281703,COC1=C(C=C(C2=C1OC(=CC2=O)C3=CC=CC=C3)O)O
+wogonoside,黄芩,1,3084961,COC1=C(C=C(C2=C1OC(=CC2=O)C3=CC=CC=C3)O)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)C(=O)O)O)O)O
+oroxylin A,黄芩,1,5320315,COC1=C(C2=C(C=C1O)OC(=CC2=O)C3=CC=CC=C3)O
+scutellarein,黄芩,1,5281697,C1=CC(=CC=C1C2=CC(=O)C3=C(O2)C=C(C(=C3O)O)O)O
+skullcapflavone II,黄芩,1,124211,COC1=CC=CC(=C1C2=CC(=O)C3=C(C(=C(C(=C3O2)OC)OC)OC)O)O
+glycyrrhizic acid,甘草,1,14982,C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O[C@@H]6[C@@H]([C@H]([C@@H]([C@H](O6)C(=O)O)O)O)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O)C)(C)C(=O)O
+liquiritigenin,甘草,1,114829,C1[C@H](OC2=C(C1=O)C=CC(=C2)O)C3=CC=C(C=C3)O
+isoliquiritigenin,甘草,1,638278,C1=CC(=CC=C1/C=C/C(=O)C2=C(C=C(C=C2)O)O)O
+formononetin,甘草,1,5280378,COC1=CC=C(C=C1)C2=COC3=C(C2=O)C=CC(=C3)O
+glabridin,甘草,1,124052,CC1(C=CC2=C(O1)C=CC3=C2OC[C@H](C3)C4=C(C=C(C=C4)O)O)C
+licochalcone A,甘草,1,5318998,CC(C)(C=C)C1=C(C=C(C(=C1)/C=C/C(=O)C2=CC=C(C=C2)O)OC)O
+glycyrol,甘草,1,5320083,CC(=CCC1=C(C2=C(C=C1O)OC(=O)C3=C2OC4=C3C=CC(=C4)O)OC)C
+paeoniflorin,白芍,1,442534,C[C@]12C[C@@]3([C@@H]4C[C@]1([C@@]4([C@H](O2)O3)COC(=O)C5=CC=CC=C5)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)CO)O)O)O)O
+albiflorin,白芍,1,24868421,C[C@]12C[C@H]([C@@H]3C[C@]1([C@@]3(C(=O)O2)COC(=O)C4=CC=CC=C4)O[C@H]5[C@@H]([C@H]([C@@H]([C@H](O5)CO)O)O)O)O
+paeonol,白芍;大黄,2,11092,CC(=O)C1=C(C=C(C=C1)OC)O
+(+)-catechin,白芍;桃仁,2,9064,C1[C@@H]([C@H](OC2=CC(=CC(=C21)O)O)C3=CC(=C(C=C3)O)O)O
+benzoic acid,白芍,1,243,C1=CC=C(C=C1)C(=O)O
+amygdalin,桃仁;苦杏仁,2,656516,C1=CC=C(C=C1)[C@H](C#N)O[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)CO[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)O)O)O
+prunasin,桃仁;苦杏仁,2,119033,C1=CC=C(C=C1)[C@H](C#N)O[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)CO)O)O)O
+oleic acid,桃仁;苦杏仁,2,445639,CCCCCCCC/C=C\CCCCCCCC(=O)O
+catalpol,地黄,1,91520,C1=CO[C@H]([C@H]2[C@@H]1[C@@H]([C@H]3[C@@]2(O3)CO)O)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O
+aucubin,地黄,1,91458,C1=CO[C@H]([C@H]2[C@@H]1[C@@H](C=C2CO)O)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O
+acteoside,地黄,1,5281800,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H](O[C@@H]([C@H]2OC(=O)/C=C/C3=CC(=C(C=C3)O)O)CO)OCCC4=CC(=C(C=C4)O)O)O)O)O)O
+fisetin,干漆,1,5281614,C1=CC(=C(C=C1C2=C(C(=O)C3=C(O2)C=C(C=C3)O)O)O)O
+butein,干漆,1,5281222,C1=CC(=C(C=C1/C=C/C(=O)C2=C(C=C(C=C2)O)O)O)O
+butin,干漆,1,92775,C1[C@H](OC2=C(C1=O)C=CC(=C2)O)C3=CC(=C(C=C3)O)O
+sulfuretin,干漆,1,5281295,C1=CC(=C(C=C1/C=C\2/C(=O)C3=C(O2)C=C(C=C3)O)O)O
+gallic acid,干漆;大黄,2,370,C1=C(C=C(C(=C1O)O)O)C(=O)O
+quercetin,甘草;桃仁;苦杏仁;黄芩,4,5280343,C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O
+kaempferol,甘草;黄芩;白芍,3,5280863,C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O
+luteolin,黄芩;甘草,2,5280445,C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O
+beta-sitosterol,大黄;桃仁;苦杏仁;白芍;地黄;甘草,6,222284,CC[C@H](CC[C@@H](C)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CC=C4[C@@]3(CC[C@@H](C4)O)C)C)C(C)C
+stigmasterol,桃仁;苦杏仁;白芍;地黄,4,5280794,CC[C@H](/C=C/[C@@H](C)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CC=C4[C@@]3(CC[C@@H](C4)O)C)C)C(C)C
+naringenin,甘草,1,439246,C1[C@H](OC2=CC(=CC(=C2C1=O)O)O)C3=CC=C(C=C3)O
+medicarpin,甘草,1,336327,COC1=CC2=C(C=C1)[C@@H]3COC4=C([C@@H]3O2)C=CC(=C4)O
+apigenin,黄芩;甘草,2,5280443,C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O
